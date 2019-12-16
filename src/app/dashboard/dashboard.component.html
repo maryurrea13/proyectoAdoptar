@@ -1,0 +1,122 @@
+
+
+<!-- Row -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <p>
+                    Esta página esta diseñada para ayudar a los miles de perritos que se encuentran desprotegidos y 
+                    en las calles colombianas. Uno de los principales objetivos es
+                    por medio de la pagina promover la adopción de
+                    mascotas en las fundaciones que se dedican al cuidado de estos animales.
+                </p>
+                <p>
+                    No compres, ADOPTA. Adoptando salvas la vida de dos animales, la de tu nuevo amigo
+                    y la del que ocupará su lugar, tan solo escoge la mascota de la cual quieres
+                    recibir todo su amor y compañia y  diligencia el formulario.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Row -->
+
+<div class="row">
+    <!-- Column -->
+    <div class="col-lg-4" *ngIf="bandera==true">
+        <div class="card">
+            <img class="card-img-top img-responsive"  src="assets/images/big/newton.png" alt="Card">
+            <div class="card-body">
+                <h3 class="font-normal">Newton - 4 años</h3>
+                <p><strong>Descripción: </strong> Soy un perrito tranquilo, sociable y alegre. 
+                    Aunque me quieren mucho en la Unidad de Cuidado Animal,
+                     quiero estar con una familia que me lleve a pasear y 
+                     jugar porque tengo mucho amor para dar. ¡Adóptame y seremos muy felices!</p>
+                <button   (click)="adoptar1($event,'Newton')" type="button" class="btn btn-info">Adoptar
+                </button>
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Column -->
+    <!-- Column -->
+    <div class="col-lg-4" *ngIf="bandera2==true">
+        <div class="card">
+            <img class="card-img-top img-responsive" src="assets/images/big/mono.png" alt="Card">
+            <div class="card-body">
+                <h3 class="font-normal">Mono - 8 años</h3>
+                <p><strong>Descripción: </strong> Llevo mucho tiempo en la unidad,
+                    mis amigos los doctores dicen que soy muy sociable porque me
+                    llevo bien con todos y con otros perritos mucho más, pero quiero 
+                    tener un hogar donde pueda disfrutar en familia, no importa si 
+                    tienen otro perro </p>
+                <button type="button"  (click)="adoptar1($event,'Mono')" class="btn btn-info">Adoptar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Column -->
+    <!-- Column -->
+    <div class="col-lg-4" *ngIf="bandera3==true">
+        <div class="card">
+            <img class="card-img-top img-responsive" src="assets/images/big/pancha.png" alt="Card">
+            <div class="card-body">
+                <h3 class="font-normal">Pancha - 4 años</h3>
+                <p><strong>Descripción: </strong>  Soy Panchita, un poco nerviosa al principio
+                    pero la más cariñosa cuando ganas mi confianza. Busco una familia paciente,
+                    que me consienta y proteja. Soy fiel y muy agradecida.
+                    Adóptame, te voy a hacer muy feliz. </p>
+                <button type="button" (click)="adoptar1($event,'Pancha')" class="btn btn-info">Adoptar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Column -->
+</div>
+
+<!--Row-->
+<div class="row">
+    <!-- Column -->
+    <div class="col-lg-4" *ngIf="bandera4==true">
+        <div class="card">
+            <img class="card-img-top img-responsive" src="assets/images/big/nata.png" alt="Card">
+            <div class="card-body">
+                <h3 class="font-normal">Nata - 3 años</h3>
+                <p><strong>Descripción: </strong> Fui rescatada luego de caminar enferma 
+                por las calles. Después de recuperarme en la Unidad de Cuidado Animal,
+                estoy lista para ir a un hogar amoroso. Soy muy sociable, tierna y fiel compañera.</p>
+                <button type="button" (click)="adoptar1($event,'Nata')"  class="btn btn-info">Adoptar</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- Column -->
+    <div class="col-lg-4" *ngIf="bandera5==true">
+        <div class="card">
+            <img class="card-img-top img-responsive" src="assets/images/big/killer.png" alt="Card">
+            <div class="card-body">
+                <h3 class="font-normal">Killer - 1 años</h3>
+                <p><strong>Descripción: </strong> Estuve muy enfermo y solo,
+                     hasta que me rescataron los médicos del equipo de Urgencias Veterinarias. 
+                     Ahora estoy muy bien, con muchas ganas de conocerte para hacerte feliz 
+                     el resto de mi vida. ¡Te espero en la Unidad de Cuidado!</p>
+                <button type="button" (click)="adoptar1($event,'Killer')"  class="btn btn-info">Adoptar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Column -->
+    <div class="col-lg-4"*ngIf="bandera6==true">
+        <div class="card">
+            <img class="card-img-top img-responsive" src="assets/images/big/lina.png" alt="Card">
+            <div class="card-body">
+                <h3 class="font-normal">Lina - 2 años</h3>
+                <p><strong>Descripción: </strong>  Fui rescatada por el equipo de Brigadas Médicas 
+                    gravemente herida en una de las calles de Bogotá. Tras varios meses de tratamiento
+                     ya me recuperé y espero un hogar donde sea feliz por siempre. </p>
+                <button type="button" (click)="adoptar1($event,'Lina')" class="btn btn-info">Adoptar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Column -->
+</div>

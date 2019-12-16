@@ -1,0 +1,107 @@
+
+<!--Formulario de los usuarios que adoptaran un perrito-->
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Formulario de Adopción</h4>
+				<h6 class="card-subtitle">Para adoptar por favor ingrese los siguientes datos:</h6>
+				<form>
+					<div class="card">
+						<div class="card-content">
+						<form (ngSubmit)="onSubmit()" class="col s6">
+							<div class="form-group row">
+								<label for="staticEmail" class="col-sm-2 col-form-label">Nombres completos:</label>
+								<div class="col-sm-10">
+									<input type="text"  [(ngModel)]="task.nombres" name="nombres"  class="form-control" > 
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="staticEmail" class="col-sm-2 col-form-label">Telefono:</label>
+								<div class="col-sm-10">
+									<input type="text" [(ngModel)]="task.telefono" name="telefono"  class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="staticEmail" class="col-sm-2 col-form-label">Ciudad:</label>
+								<div class="col-sm-10">
+									<input type="text"  [(ngModel)]="task.ciudad" name="ciudad"  class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="staticEmail" class="col-sm-2 col-form-label">Direccion:</label>
+								<div class="col-sm-10">
+									<input type="text"  [(ngModel)]="task.direccion" name="direccion"  class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="staticEmail" class="col-sm-2 col-form-label">Nombre del perrito a adoptar:</label>
+								<div class="col-sm-10">
+									<input type="text"  [(ngModel)]="task.nomPerrito" name="nomPerrito"  class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="staticEmail" class="col-sm-2 col-form-label">Email:</label>
+								<div class="col-sm-10">
+									<input type="text"  [(ngModel)]="task.email" name="email"  class="form-control">
+								</div>
+							</div>
+							<input type="submit" class="btn btn-primary mb-2">
+						</form>
+						</div>
+					</div>
+					
+				  </form>
+			
+			</div>
+		</div>
+		
+	
+	</div>
+</div><!--Se muestra de la base de datos los usuarios que adoptaron-->
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Datos de personas que han adoptado</h4>
+			
+				<form>
+					<div *ngIf="tasks?.length > 0;else noTasks">
+						<ul *ngFor="let task of tasks" class="collection">
+						  <li class="collection-item" (dblclick)="deleteTask($event, task)">
+							<strong>{{ task.nombres }} </strong> : tel:{{ task.telefono }}, ciudad: {{task.ciudad}},
+							 dirección:{{task.direccion}}, Perrito adoptado:{{task.nomPerrito}}, Email:{{task.email}}
+							<a href="#" class="secondary-content">
+							  <i (click)="deleteTask($event, task)" class="fa fa-trash"></i>
+							  <i (click)="editTask($event, task)" class="fa fa-pencil"></i>
+							</a>
+							<div *ngIf="editState && taskToEdit.id === task.id">
+							  <form (ngSubmit)="updateTask(task)">
+								<div class="row">
+								  <div class="input-field col s6">
+									<input 
+									  type="text" name="nombres"
+									  placeholder="Edit Title" [(ngModel)]="task.nombres">
+								  </div>
+								  <div class="input-field col s6">
+									  <input 
+										type="text" name="telefono"
+										placeholder="Edit Description" [(ngModel)]="task.id">
+								  </div>
+								  <input type="submit" class="btn" value="Update Task">
+								  <button class="btn red" (click)="deleteTask($event, task)">Delete Task</button>
+								</div>
+							  </form>
+							</div>
+					  
+						  </li>
+						</ul>
+					  </div>
+				  </form>
+			
+			</div>
+		</div>
+		
+	
+	</div>
+</div>
